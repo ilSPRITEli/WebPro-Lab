@@ -1,0 +1,54 @@
+*{
+    font-family: Kanit;
+}
+
+  
+  
+  /* Styling */
+  
+.container{
+    /* margin: auto; */
+    /* width: 640px;  */
+    padding: 3rem;
+    /* font-family: 'Lexend Deca', sans-serif;  */
+    color: #2E475D;    
+  }
+
+.container{
+    display: flex;
+    margin-block:10rem;
+    /* flex in vertical */
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    /* justify-self: center; */
+    align-items: center;
+}
+
+/* create 7*6 grid */
+.calendar-grid {
+    display: grid;
+    width: fit-content;
+    /* justify-content: center; */
+    align-items: center;
+    grid-template-columns: repeat(7, 5rem);
+    grid-template-rows: repeat(6, 3.2rem);
+    /* grid-row-gap: 3.3rem; */
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+    background-color: rgb(231, 231, 231);
+    /* border:#2E475D solid 1px; */
+    /* height:min-content; */
+    /* grid-area: auto; */
+}
+
+.info{
+    text-align: center;
+    border:#2E475D solid 1px;
+    padding:0.8rem;
+}
+
+#no_month{
+    color:#f97316;
+}

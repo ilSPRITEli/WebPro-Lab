@@ -1,0 +1,153 @@
+*{
+    font-family: Kanit;
+    /* font-size: large; */
+}
+
+body, .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+/* create 2x1 grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.5rem;
+  padding-inline: 8rem;
+  padding-block: 2.5rem;
+  /* height:min-content; */
+  /* grid-area: auto; */
+}
+
+/* create 3*6 grid-info */
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows:repeat(6, 0.1fr);
+  /* grid-gap: 2.5rem; */
+  padding-inline: 5rem;
+  /* padding-block: 2.5rem; */
+  /* background-color: black; */
+  border-color: brown;
+  border: 10px;
+  /* height:min-content; */
+  /* grid-area: auto; */
+}
+
+.item {
+    height: fit-content;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 0.8rem;
+    /* font-size: 30px; */
+    text-align: center;
+  }
+
+/* text-align for div id 1 */
+#one, #two, #three, #four, #five{
+    height: 100%;
+    border: transparent solid;
+    padding:0.3rem;
+    background-color: transparent;
+    text-align: left;
+    /* font-size: 1.5rem; */
+    font-weight: medium;
+    color:aliceblue;
+    /* color: #ffffff; */
+    /* margin-top: 50px; */
+}
+
+.grid-graph{
+    /* background-color: #ffffff; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.3rem;
+    grid-template-rows: repeat(6, 2rem);
+}
+
+
+svg{
+    /* fill:#000000; */
+    background-color:rgb(199, 206, 211);
+    border-radius: 5px;
+}
+text{
+    fill:aliceblue;
+}
+
+#y1{
+    width:0%;
+    /* add keyframe 1 time*/
+    animation: y1 1s ease-in-out forwards;
+}
+
+@keyframes y1{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+#y2{
+    width:0%;
+    /* add keyframe 1 time*/
+    animation: y2 1s ease-in-out forwards;
+}
+
+@keyframes y2{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+#y3{
+    width:0%;
+    /* add keyframe 1 time*/
+    animation: y3 1s ease-in-out forwards;
+}
+
+@keyframes y3{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+#y4{
+    width:0%;
+    /* add keyframe 1 time*/
+    animation: y4 1s ease-in-out forwards;
+}
+
+@keyframes y4{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+#y5{
+    width:0%;
+    /* add keyframe 1 time*/
+    animation: y5 1s ease-in-out forwards;
+}
+
+@keyframes y5{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}

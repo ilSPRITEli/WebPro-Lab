@@ -1,0 +1,40 @@
+html, body{
+    font-family: Kanit;
+    height: 100%;
+    font-weight:normal;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 60%; */
+    justify-content: center;
+}
+
+#quiz_contain{
+    width:30%;
+    background-color: #e6edee;
+    border-radius: 10px;
+    padding-inline: 100px;
+    padding-block: 20px;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    background-color: #ecfbfd;
+    color: #0d2b30;
+    width: fit-content;
+    padding-inline: 20px;
+    border-radius: 10px;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+}

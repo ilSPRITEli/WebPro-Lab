@@ -1,0 +1,15 @@
+html, body {height: 100%;}
+
+ul {
+    font-family: Kanit;
+    list-style-type: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    /* align-items: center; */
+    height: 100%;
+}

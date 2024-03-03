@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lab5-2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id = "container"class="container">
+        </div>
+    </body>
+    <script>
+
+        let container = document.getElementById("container");
+
+        $.getJSON("./person.json", function(data){
+            $.each(data, function(key, value){
+
+                var p = document.createElement("p");
+
+
+                var name = value.firstName + " " + value.lastName + ", ";
+                var gender = value.gender.type + " ";
+                var age = value.age + " years old.<br>"
+                var address = value.address.streetAddress + " " + value.address.city + " " + value.address.state + "<br>" + value.address.postalCode+"<br>";
+                
+                
+                var phone = "";
+                $.each(value.phoneNumber, function(key, value){
+                    phone += value.type + ": " + value.number + "<br>";
+                });
+
+                p.innerHTML = name + gender + age + address + phone;
+                container.appendChild(p);
+
+                })
+            });
+    </script>
+</html>

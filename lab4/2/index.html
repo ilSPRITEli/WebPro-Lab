@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="validator.js"></script> -->
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="form-group row">
+                <label lang="ENS" for="inputName" id = "lab" class="col-sm-2 col-form-label">Name</label>
+                <label lang="THS" for="inputName" id = "lab" class="col-sm-2 col-form-label">ชื่อ</label>
+                <div id = "test" class="col-sm-5">
+                    <input lang="ENS" type="Name" class="form-control" id="inputName" placeholder="insert your name">
+                    <input lang="THS" type="Name" class="form-control" id="inputName" placeholder="ใส่ชื่อ">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label lang = "ENS" for="inputSname" id = "lab2" class="col-sm-2 col-form-label">LastName</label>
+                <label lang = "THS" for="inputSname" id = "lab2" class="col-sm-2 col-form-label">นามสกุล</label>
+                <div class="col-sm-5">
+                    <input lang="ENS" type="Sname" class="form-control" id="inputSname" placeholder="insert your lastname">
+                    <input lang="THS" type="Sname" class="form-control" id="inputSname" placeholder="ใส่นามสกุล">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label lang = "ENS" for="inputCountry" id = "lab3" class="col-sm-2 col-form-label">Country</label>
+                <label lang = "THS" for="inputCountry" id = "lab3" class="col-sm-2 col-form-label">ประเทศ</label>
+                <div class="col-sm-5">
+                    <select lang = "ENS" id="input" class="form-control">
+                        <option id="inputCountry" selected>===========Choose your country===========</option>
+                        <option>Brunei</option>
+                        <option>Cambodia</option>
+                        <option>Indonesia</option>
+                        <option>Laos</option>
+                        <option>Malaysia</option>
+                        <option>Myanmar</option>
+                        <option>Philippines</option>
+                        <option>Singapore</option>
+                        <option>Thailand</option>
+                        <option>Vietnam</option>
+                    </select>
+                    <select lang = "THS" id="input" class="form-control">
+                        <option id="inputCountry" selected>===========เลือกประเทศของคุณ===========</option>
+                        <option>บรูไน</option>
+                        <option>กัมพูชา</option>
+                        <option>อินโดนีเซีย</option>
+                        <option>ลาว</option>
+                        <option>มาเลเซีย</option>
+                        <option>พม่า</option>
+                        <option>ฟิลิปปินส์</option>
+                        <option>สิงคโปร์</option>
+                        <option>ไทย</option>
+                        <option>เวียดนาม</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn_contain">
+                <div title="switch language" btn-tip="press me to switch the language!!" onclick="swlan()" id = "big_btn" class="component" style="background-color: #d6d6d6;">
+                    <button id="innerBtn" type="button" class="ellipse" style="background-color: #383acc;">
+                    </button>
+                </div>
+            </div>
+        </div>
+      </form>
+</body>
+<script>
+    $('[lang="THS"]').hide();
+    var x = 0;
+    function swlan() {
+        $('[lang="THS"]').toggle();
+        $('[lang="ENS"]').toggle();
+        updateBtn();
+    }
+
+    function updateBtn(){
+        let btn = document.getElementById("innerBtn");
+        let big_btn = document.getElementById("big_btn");
+
+        if(x == 0){
+            // btn.innerHTML = "EN";
+            btn.style.backgroundColor = "#92b8ff";
+            btn.style.left = "44px";
+            btn.style.color = "#000000";
+            big_btn.style.backgroundColor = "#82a4d1";
+            btn.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/255px-Flag_of_Thailand.svg.png')";
+            big_btn.title = "เปลี่ยนภาษา";
+            x = 1;
+        }
+        else{
+            // btn.innerHTML = "TH";
+            btn.style.backgroundColor = "#383acc";
+            btn.style.left = "4px";
+            btn.style.color = "#f0f8ff";
+            big_btn.style.backgroundColor = "#d6d6d6";
+            btn.style.backgroundImage = "url('https://vectorflags.s3.amazonaws.com/flags/us-square-01.png')";
+            big_btn.title = "switch language";
+            x = 0;
+        }
+
+    }
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="validator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="myForm" role="form">
+            <div class="form-group">
+                <label for="iden">หมายเลขบัตรประชาชน:</label>
+                <input maxlength="13" type="number" class="form-control" id="iden" placeholder="xxxxxxxxxxxxx">
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="mr" value="นาย">
+                    <label class="form-check-label" for="inlineRadio1">นาย</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="ms" value="นาง">
+                    <label class="form-check-label" for="inlineRadio2">นาง</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="mrs" value="นางสาว">
+                    <label class="form-check-label" for="inlineRadio3">นางสาว</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="boy" value="เด็กชาย">
+                    <label class="form-check-label" for="inlineRadio4">เด็กชาย</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="grl" value="เด็กหญิง">
+                    <label class="form-check-label" for="inlineRadio4">เด็กหญิง</label>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col">
+                  <input maxlength="19" type="text" id = "fname" class="form-control" placeholder="กรอกชื่อจริง">
+                </div>
+                <div class="col">
+                  <input maxlength="29" type="text" id = "lname" class="form-control" placeholder="กรอกนามสกุลจริง">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adrs">ที่อยู่:</label>
+                <input type="adrs" class="form-control" id="adrs" placeholder="กรอกที่อยู่">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="tmb">ตำบล:</label>
+                    <input type="tmb" class="form-control" id="tmb" placeholder="กรอกตำบล">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="amp">อำเภอ:</label>
+                    <input type="amp" class="form-control" id="amp" placeholder="กรอกอำเภอ">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">จังหวัด:</label>
+                    <select id="inputState" class="form-control">
+                      <option value="" selected>---- เลือกจังหวัด ----</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-group md-3">
+                <label for="inputZip">รหัสไปรษณีย์:</label>
+                <input maxlength="5" type="number" class="form-control" id="inputZip" placeholder="XXXXX">
+            </div>
+            
+            <button onclick="validateForm()"type="submit" class="btn btn-success">Validate</button>
+            
+        </form>
+        
+    </div>
+</body>

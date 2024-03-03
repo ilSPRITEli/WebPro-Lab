@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+
+    <meta name="viewport" content="width=device-width height=device-height, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Fundamental Web Programming Lab.</title>
+</head>
+<body>
+    <div class = container>
+        <!-- create image grid 3x2 -->
+        <div class = "grid-container">
+            <div class = "grid-info">
+                <div class = "item">ลำดับ</div>
+                <div class = "item">ชื่อ</div>
+                <div class = "item">คะแนน</div>
+
+                <div class = "item">1</div>
+                <div class = "item">J. Depp</div>
+                <div class = "item">60</div>
+
+                <div class = "item">2</div>
+                <div class = "item">D. Washington</div>
+                <div class = "item">90</div>
+
+                <div class = "item">3</div>
+                <div class = "item">B. Pitt</div>
+                <div class = "item">50</div>
+
+                <div class = "item">4</div>
+                <div class = "item">R. Crowe</div>
+                <div class = "item">80</div>
+
+                <div class = "item">5</div>
+                <div class = "item">T. Cruise</div>
+                <div class = "item">75</div>
+            </div>
+            <div class = "grid-graph">
+                <div class = "item" id = "one">
+                    <svg width="100%" height="100%">
+                        <g>
+                            <rect id = "y1" class= "yes" rx="5" width="60%" height="100%" style="fill:#ef4444;" />
+                            <text x="10" y="20">J. Depp</text> 
+                        </g>
+                    </svg>
+                    
+                </div>
+                <div class = "item" id = "two">
+                    <svg width="100%" height="100%">
+                        <g>
+                            <rect id = "y2" class= "yes" rx="5" width="90%" height="100%" style="fill:#3b82f6;" />
+                            <text x="10" y="20">D. Washington</text> 
+                        </g>
+                    </svg>
+                </div>
+                <div class = "item" id = "three">
+                    <svg width="100%" height="100%">
+                        <g>
+                            <rect id = "y3" class= "yes" rx="5" width="50%" height="100%" style="fill:#14b8a6;" />
+                            <text x="10" y="20">B. Pitt</text> 
+                        </g>
+                    </svg>
+                </div>
+
+                <div class = "item" id = "four">
+                    <svg width="100%" height="100%">
+                        <g>
+                            <rect id = "y4" class= "yes" rx="5" width="80%" height="100%" style="fill:#9333ea;" />
+                            <text x="10" y="20">R. Crowe</text> 
+                        </g>
+                    </svg>
+                </div>
+                <div class = "item" id = "five">
+                    <svg width="100%" height="100%">
+                        <g>
+                            <rect id = "y5" class= "yes" rx="5" width="75%" height="100%" style="fill:#f59e0b;" />
+                            <text x="10" y="20">T. Cruise</text> 
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+    </div>
+</body>

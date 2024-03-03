@@ -1,0 +1,172 @@
+/* Create two unequal columns that floats next to each other */
+
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+  }
+  
+  .left {
+    width: 50%;
+    background-color: #bbbbbb;
+  }
+  
+  .right {
+    width: 50%;
+    background-color: #aaaaaa;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@font-face {
+    font-family: Cinzel;
+    /* font-style: NORMAL_OR_ITALIC; */
+    /* font-weight: NUMERIC_WEIGHT_VALUE; */
+    src: url(fonts/Cinzel.ttf);
+}
+
+h1 {
+  text-align: center;
+  font-size:x-large;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+h2 {
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size:large;
+}
+/* .image {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+} */
+
+.big{
+    font-family: Cinzel;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 3%;
+    background-color: rgb(170, 170, 170);
+    /* padding-top: 0; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* background-color: #3f3f3f; */
+    /* background-image: url("http://10.0.15.21/lab/lab2/files/norman.jpg"); */
+    /* background-blend-mode: lighten; */
+}
+
+.mainImg{
+    scale:0.8;
+    object-fit:cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 2%;
+    margin-bottom: 3rem;
+    transition: 0.3s;
+}
+
+.mainImg:hover{
+  scale:0.85;
+}
+
+
+/* 
+.contain{
+    
+} */
+
+
+.picwow{
+    display: block;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.486);
+    text-align: center;
+    /* width: 25%; */
+    height: 30%;
+    margin-bottom: 1rem;
+    border-radius: 1%;
+    align-items: center;
+    
+    /* 
+    margin-top: 50px; */
+}
+
+.tex{
+  font-family: Cinzel;
+  /* text-indent: rem; */
+  text-align: left;
+  font-size:medium;
+  /* color: #ffffff; */
+  margin-top: 2.5rem;
+  /* margin-top: 0.02rem; */
+  /* justify-self: center;
+  align-self: center; */
+  /* justify-content: center; */
+  display:flex;
+  /* text-align: center; */
+  /* margin-top: 50px; */
+}
+
+.yes{
+  width: 55%;
+  font-family: Cinzel;
+  /* text-indent: -1000rem; */
+  font-size:small;
+  font-weight:normal;
+  color: #ffffff;
+  /* margin-top: -0.5rem; */
+  /* margin-top: 0.02rem; */
+  /* justify-self: center;
+  align-self: center; */
+  justify-content: center;
+  display:flex;
+  /* text-align: center; */
+  /* margin-top: 50px; */
+}
+
+.contain{
+  display: block;
+  justify-content: center;
+}
+
+ul{
+  margin-top: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.363);
+  border-radius: 1%;
+  padding-inline:5rem;
+  /* padding-top: 2rem; */
+  padding-block: 1rem;
+  
+}
+
+ul li{
+  font-size: small;
+  padding-block:0.5rem;
+  transition: 0.3s;
+  border-radius: 0.3rem;
+}
+
+ul li:hover{
+  scale:1.05;
+  font-weight: bold;
+  background-color:#aaaaaa60;
+}
+
+.descrip{
+  font-size: xx-small;
+  font-weight: bold;
+  margin: -2.5rem;
+  /* padding-block:0.2rem; */
+}
+

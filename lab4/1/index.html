@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="validator.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <form id="myForm" role="form">
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="inputVal1">Val1</label>
+                  <input type="number" class="form-control" id="val1" placeholder="insert number">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputVal2">Val2</label>
+                    <input type="number" class="form-control" id="val2" placeholder="insert number">
+                </div>
+            </div>
+            <div class="btn_contain">
+                <button id = "cal" type="button" onclick="addNode()" class="btn btn-success">Calculate</button></div>
+            <div id="res_contain">
+                <p id = "res_text">Result : </p>
+                <p id = "res"></p>
+            </div>
+            <div id="history">
+            </div>
+        </form>
+        
+    </div>
+</body>
+
+<script> 
+    function addNode() {
+
+        
+        val1 = document.getElementById("val1").value;
+        val2 = document.getElementById("val2").value;
+        
+        if(val1 == "" || val2 == ""){
+            alert("Please insert number");
+            return;
+        }
+
+        res = Number(val1) + Number(val2);
+
+        document.getElementById("res").innerHTML = res;
+        
+        let ptag = document.createElement("p");
+        let txt = document.createTextNode(val1 + " + " + val2 + " = " + res);
+
+        ptag.appendChild(txt);
+
+        document.getElementById("history").appendChild(ptag);
+        
+                   
+    }
+</script>

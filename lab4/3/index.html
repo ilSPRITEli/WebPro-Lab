@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <!-- link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="validator.js"></script> -->
+</head>
+<body>
+    <form>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <input id = "stid" type="number" class="form-control" placeholder="รหัสนักศึกษา">
+                </div>
+                
+                <div class="col">
+                  <input id = "name" type="text" class="form-control" placeholder="ชื่อ">
+                </div>
+
+
+                <div class="col">
+                  <input id = "lname" type="text" class="form-control" placeholder="นามสกุล">
+                </div>
+            </div>
+            <div class="btn_contain">
+                <button id = "sub" type="button" onclick="regis()" class="btn btn-success">ลงทะเบียน</button>
+            </div>
+            <div class="table_contain">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">ลำดับ</th>
+                        <th scope="col">รหัสนักศึกษา</th>
+                        <th scope="col">ชื่อ</th>
+                        <th scope="col">นามสกุล</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </form>
+</body>
+<script>
+    let x = 1;
+    function regis() {
+        let id = document.getElementById("stid").value;
+        let name = document.getElementById("name").value;
+        let lname = document.getElementById("lname").value;
+
+        if(id == "" || name == "" || lname == ""){
+            $.alert({
+                title: 'Alert!',
+                content: "กรุณากรอกข้อมูลของท่านให้ครบถ้วน",
+            });
+            return;
+        }else if(id.length < 8 || id.length > 8){
+            $.alert({
+                title: 'Alert!',
+                content: "รหัสนักศึกษาต้องมีความยาว 8 หลัก",
+            });
+            return;
+        }else if(name.length < 2 || lname.length < 2){
+            $.alert({
+                title: 'Alert!',
+                content: "ชื่อและนามสกุลต้องมีความยาวมากกว่า 2 ตัวอักษร",
+            });
+            return;
+        }
+
+        let table = document.getElementsByTagName("tbody")[0];
+        let row = table.insertRow();
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        cell1.innerHTML = x;
+        cell2.innerHTML = id;
+        cell3.innerHTML = name;
+        cell4.innerHTML = lname;
+        x++;
+
+    }
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lab5-3</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="head">
+            <h1>Quiz</h1>
+        </div>
+        <form id = "container">
+            <ol id = "quiz_contain">
+            </ol>
+        </form>
+    </body>
+    <script>
+        var quiz = document.getElementById("quiz_contain");
+        var x = 0;
+        // get JSON data from file
+        fetch('./questionAnswerData.json')
+            .then((response) => response.json())
+            .then((test) => {
+                test.forEach((element) => {
+                    var li = document.createElement("li");
+
+                    var p = document.createElement("p");
+                    p.innerHTML = element.question;
+
+                    var form_check = document.createElement("div");
+                    form_check.className = "form-check";
+
+                    function createInput(name, label) {
+                        var input = document.createElement("input");
+                        input.type = "radio";
+                        input.name = name;
+
+                        var labelElement = document.createElement("label");
+                        labelElement.innerHTML = label + '<br>';
+
+                        form_check.appendChild(input);
+                        form_check.appendChild(labelElement);
+                    }
+
+                    createInput("ans" + x, element.answers.a);
+                    createInput("ans" + x, element.answers.b);
+                    createInput("ans" + x, element.answers.c);
+
+                    li.appendChild(p);
+                    li.appendChild(form_check);
+                    quiz.appendChild(li);
+
+                    x++;
+                });
+            })
+    </script>
+</html>

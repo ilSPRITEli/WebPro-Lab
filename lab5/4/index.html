@@ -1,0 +1,177 @@
+<!-- create html form with bootstrap -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/chakra-petch" rel="stylesheet">
+    <!-- link to styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="validator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="myForm" role="form">
+            <div class="form-group">
+                <label for="iden">หมายเลขบัตรประชาชน:</label>
+                <input maxlength="13" type="number" class="form-control" id="iden" placeholder="xxxxxxxxxxxxx">
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="mr" value="นาย">
+                    <label class="form-check-label" for="inlineRadio1">นาย</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="ms" value="นาง">
+                    <label class="form-check-label" for="inlineRadio2">นาง</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="mrs" value="นางสาว">
+                    <label class="form-check-label" for="inlineRadio3">นางสาว</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="boy" value="เด็กชาย">
+                    <label class="form-check-label" for="inlineRadio4">เด็กชาย</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="title" id="grl" value="เด็กหญิง">
+                    <label class="form-check-label" for="inlineRadio4">เด็กหญิง</label>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col">
+                  <input maxlength="19" type="text" id = "fname" class="form-control" placeholder="กรอกชื่อจริง">
+                </div>
+                <div class="col">
+                  <input maxlength="29" type="text" id = "lname" class="form-control" placeholder="กรอกนามสกุลจริง">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adrs">ที่อยู่:</label>
+                <input type="adrs" class="form-control" id="adrs" placeholder="กรอกที่อยู่">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="tmb">ตำบล/แขวง:</label>
+                    <input type="tmb" class="form-control" id="tmb" placeholder="กรอกตำบล">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="amp">อำเภอ/เขต:</label>
+                    <input type="amp" class="form-control" id="amp" placeholder="กรอกอำเภอ">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">จังหวัด:</label>
+                    <select id="prv" class="form-control">
+                        <option value="" selected>-------------- เลือกจังหวัด --------------</option>
+                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                        <option value="กระบี่">กระบี่ </option>
+                        <option value="กาญจนบุรี">กาญจนบุรี </option>
+                        <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                        <option value="กำแพงเพชร">กำแพงเพชร </option>
+                        <option value="ขอนแก่น">ขอนแก่น</option>
+                        <option value="จันทบุรี">จันทบุรี</option>
+                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                        <option value="ชัยนาท">ชัยนาท </option>
+                        <option value="ชัยภูมิ">ชัยภูมิ </option>
+                        <option value="ชุมพร">ชุมพร </option>
+                        <option value="ชลบุรี">ชลบุรี </option>
+                        <option value="เชียงใหม่">เชียงใหม่ </option>
+                        <option value="เชียงราย">เชียงราย </option>
+                        <option value="ตรัง">ตรัง </option>
+                        <option value="ตราด">ตราด </option>
+                        <option value="ตาก">ตาก </option>
+                        <option value="นครนายก">นครนายก </option>
+                        <option value="นครปฐม">นครปฐม </option>
+                        <option value="นครพนม">นครพนม </option>
+                        <option value="นครราชสีมา">นครราชสีมา </option>
+                        <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                        <option value="นครสวรรค์">นครสวรรค์ </option>
+                        <option value="นราธิวาส">นราธิวาส </option>
+                        <option value="น่าน">น่าน </option>
+                        <option value="นนทบุรี">นนทบุรี </option>
+                        <option value="บึงกาฬ">บึงกาฬ</option>
+                        <option value="บุรีรัมย์">บุรีรัมย์</option>
+                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                        <option value="ปทุมธานี">ปทุมธานี </option>
+                        <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                        <option value="ปัตตานี">ปัตตานี </option>
+                        <option value="พะเยา">พะเยา </option>
+                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                        <option value="พังงา">พังงา </option>
+                        <option value="พิจิตร">พิจิตร </option>
+                        <option value="พิษณุโลก">พิษณุโลก </option>
+                        <option value="เพชรบุรี">เพชรบุรี </option>
+                        <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                        <option value="แพร่">แพร่ </option>
+                        <option value="พัทลุง">พัทลุง </option>
+                        <option value="ภูเก็ต">ภูเก็ต </option>
+                        <option value="มหาสารคาม">มหาสารคาม </option>
+                        <option value="มุกดาหาร">มุกดาหาร </option>
+                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                        <option value="ยโสธร">ยโสธร </option>
+                        <option value="ยะลา">ยะลา </option>
+                        <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                        <option value="ระนอง">ระนอง </option>
+                        <option value="ระยอง">ระยอง </option>
+                        <option value="ราชบุรี">ราชบุรี</option>
+                        <option value="ลพบุรี">ลพบุรี </option>
+                        <option value="ลำปาง">ลำปาง </option>
+                        <option value="ลำพูน">ลำพูน </option>
+                        <option value="เลย">เลย </option>
+                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                        <option value="สกลนคร">สกลนคร</option>
+                        <option value="สงขลา">สงขลา </option>
+                        <option value="สมุทรสาคร">สมุทรสาคร </option>
+                        <option value="สมุทรปราการ">สมุทรปราการ </option>
+                        <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                        <option value="สระแก้ว">สระแก้ว </option>
+                        <option value="สระบุรี">สระบุรี </option>
+                        <option value="สิงห์บุรี">สิงห์บุรี </option>
+                        <option value="สุโขทัย">สุโขทัย </option>
+                        <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                        <option value="สุรินทร์">สุรินทร์ </option>
+                        <option value="สตูล">สตูล </option>
+                        <option value="หนองคาย">หนองคาย </option>
+                        <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                        <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                        <option value="อุดรธานี">อุดรธานี </option>
+                        <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                        <option value="อุทัยธานี">อุทัยธานี </option>
+                        <option value="อุบลราชธานี">อุบลราชธานี</option>
+                        <option value="อ่างทอง">อ่างทอง </option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-group md-3">
+                <label for="zip">รหัสไปรษณีย์:</label>
+                <input maxlength="5" type="number" class="form-control" id="zip" placeholder="XXXXX">
+            </div>
+            
+            <button onclick="validateForm()"type="button" class="btn btn-success">Save</button>
+            <button onclick="showLocalData()"type="button" class="btn btn-success">Load</button>
+            
+        </form>
+
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">หมายเลขบัตรประชาชน</th>
+                <th scope="col">คำนำหน้า</th>
+                <th class="fullname" scope="col">ชื่อ-นามสกุล</th>
+                <th class="tu" scope="col">ที่อยู่</th>
+                <th scope="col">จังหวัด</th>
+                <th scope="col">รหัสไปรษณีย์</th>
+              </tr>
+            </thead>
+            <tbody id = "myTable">
+            </tbody>
+        </table>
+        
+    </div>
+</body>

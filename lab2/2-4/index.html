@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Lexend Deca' rel='stylesheet'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>August 2023</h2>
+    <div class="calendar-grid">
+        <div class="info">Sun</div>
+        <div class="info">Mon</div>
+        <div class="info">Tu</div>
+        <div class="info">Wed</div>
+        <div class="info">Thu</div>
+        <div class="info">Fri</div>
+        <div class="info">Sat</div>
+
+        <div id="no_month" class="info">30</div>
+        <div id="no_month" class="info">31</div>
+        <script>
+            var i;
+            for (i = 1; i <= 31; i++) {
+                var div = document.createElement("div");
+                div.className = "info";
+                div.innerHTML = i;
+                document.getElementsByClassName("calendar-grid")[0].appendChild(div);
+            }
+        </script>
+        <div id="no_month" class="info">1</div>
+        <div id="no_month" class="info">2</div>
+    </div>
+    <!-- create script function that create div class="info" with 1-31 text -->
+
+    
+  </body>
+</html>

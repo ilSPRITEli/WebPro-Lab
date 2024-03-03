@@ -1,0 +1,92 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block:10rem;
+}
+
+.btn_contain{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background: #d4d4d4; */
+}
+
+label{
+    background-color: rgb(231, 231, 231);
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.component {
+    width: 88px;
+    height: 53px;
+    /* background-color: #92b8ff; */
+    border-radius: 50px;
+    overflow: hidden;
+    
+  }
+  
+.component .ellipse {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: 6px;
+    left: 4px;
+    /* background-color: #383acc; */
+    font-weight: bold;
+    color:#f0f8ff;
+    border-radius: 20px;
+    border-width: 0px;
+    transition:0.5s;
+
+    background-image: url(https://vectorflags.s3.amazonaws.com/flags/us-square-01.png);
+    background-size:cover;
+}
+
+.component .ellipse:hover{
+    border: none;
+    outline:none;
+    font-weight: bold;
+}
+
+.component .ellipse:active{
+    border: none;
+    outline:none;
+    font-weight: bold;
+}
+
+.component .ellipse:focus{
+    border: none;
+    outline:none;
+    font-weight: bold;
+}
+
+
+#big_btn{
+    transition:0.5s;
+}
+
+/* 
+[btn-tip]:hover::after {
+    display: block;
+    position: absolute;
+    content: attr(btn-tip);
+    border: 1px solid black;
+    background: #eee;
+    padding: .25em;
+} */
